@@ -35,6 +35,7 @@ CREATE TABLE assignment(
 assignment_id INT NOT NULL AUTO_INCREMENT,
 user_id INT NOT NULL,
 task_id INT NOT NULL,
+time_elapsed INT,
 PRIMARY KEY (assignment_id),
 FOREIGN KEY (user_id) REFERENCES user(user_id),
 FOREIGN KEY (task_id) REFERENCES task(task_id)
