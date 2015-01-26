@@ -1,6 +1,4 @@
-/* CREATION ET UTILISATION DE LA DATABASE */
-CREATE DATABASE timetracking;
-USE timetracking;
+
 
 /* TABLE USER */
 CREATE TABLE user(
