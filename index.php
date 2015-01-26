@@ -11,9 +11,11 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+
         
         
         echo 'TETE DE GROS NOEUD';
+
         ?>
     </body>
 </html>
