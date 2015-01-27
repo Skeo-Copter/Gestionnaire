@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>RestFul With AngularJS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .colorize{color:orange;}
+        </style>
+        
+         
+        
+    </head>
+    <body ng-app="todoModule">
+        
+        <div ng-controller="todoCtrl">
+            <ul>
+                <li ng-repeat="todo in todos">
+                    <input type="checkbox" ng-click="todo.done=!todo.done"> 
+                    <span ng-class="{colorize: !todo.done}"> {{ todo.task }}</span>
+                </li>
+            </ul>
+        </div>
+<!--
+
+
+-->
+<!--        <span id="time">00:00:00</span>
+<script type="text/javascript">
+var time = "0:0:0";
+function changeTime() {
+    var timeSplited = time.split(':');
+    var hour = timeSplited[0];
+    var minute = timeSplited[1];
+    var second = timeSplited[2];
+    second++;
+    if(second==60) {
+        second = '0';
+        minute++;
+        if(minute == 60){
+            minute = '0';
+            hour++;
+        }
+    }
+	hour = '0'+hour;
+	hour = hour.toString().substr(-2, 2);
+	minute = '0'+minute;
+	minute = minute.toString().substr(-2, 2);
+	second = '0'+second;
+	second = second.toString().substr(-2, 2);
+    time = hour+':'+minute+':'+second;
+    document.getElementById('time').innerHTML = time;
+} 
+var instance = self.setInterval(changeTime ,1000);
+</script>-->
+
+
+<!--
+
+
+-->
+
+
+
+<!--        <div ng-controller="MyCtrl">
+            <ul>
+                <li>
+                    {{ totalDays }} days<br />
+        {{ hours }} hours<br />
+        {{ minutes|zeropad }} minutes<br />
+        {{ seconds|zeropad }} seconds
+                    
+                </li>
+            </ul>
+        </div>-->
+        
+       
+        
+     
+        <script src = "js/angular.min.js"></script>
+        <script src = "js/app/app.js"></script>
+        <script src = "js/app/controllers.js"></script>
+         <script></script>
+       
+        
+    </body>
+</html>
