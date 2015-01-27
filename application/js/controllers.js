@@ -5,6 +5,19 @@
 app.controller('taskCtrl', function ($scope, $http) {
     $scope.prenom = 'Jaroul';
        });
+      
+        
+app.controller('chronoCtrl', function ($scope){
+  
+});        
+    
+//        app.controller('MyCtrl', function MyCtrl($scope, chronoService) {
+//        $scope.time = Date.now();
+//        chronoService.addTimer('myTimer', { interval: 500 });
+//        chronoService.start();
+//    });
+
+
 
 /**********************/
 /* CONTROLLERS MANAGER */
@@ -27,19 +40,5 @@ app.controller('managerCtrl', function ($scope) {
         }
     ];
 });
-        
-app.controller('chronoCtrl', function ($scope){
-    
 
-
-
-
-});        
-        
-        
-//        app.controller('MyCtrl', function MyCtrl($scope, chronoService) {
-//        $scope.time = Date.now();
-//        chronoService.addTimer('myTimer', { interval: 500 });
-//        chronoService.start();
-//    });
 
