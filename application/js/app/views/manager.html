@@ -11,8 +11,13 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body ng-app="taskModule">
-        <div ng-controller="managerCtrl">
-            {{ array }}
+        <div ng-controller="taskListCtrl">
+            <h2 ng-repeat="task in array">{{ task.titre }}</h2>
+            <p ng-repeat="task in array">
+                {{ task.description }} <br>
+            <p ng-repeat="task in array"><u>Utilisateur concerné</u> : {{ task.user }}</p>
+        <i ng-repeat="task in array"><u>Deadline</u> : {{ task.deadline }}</i>
+            </p>
         </div>
         
         

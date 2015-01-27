@@ -23,20 +23,20 @@ app.controller('chronoCtrl', function ($scope){
 /**********************/
 /* CONTROLLERS MANAGER */
 /*********************/
-app.controller('managerCtrl', function ($scope) {
+app.controller('taskListCtrl', function ($scope) {
     $scope.array = [
         {
             "titre" : "Acheter mouton",
             "description" : "Faut un mouton c'est important pour l'amusement",
-            "user concerné" : "LePen",
-            "date prévue" : "2015-02-04",
+            "user" : "LePen",
+            "deadline" : "2015-02-04",
             "date de fin" : "2015-02-14"
         },
         {
             "titre" : "Vendre surplus de poneys",
             "description" : "Trop de poneys tue le poney",
-            "user concerné" : "PoneyMaster",
-            "date prévue" : "2015-12-19",
+            "user" : "PoneyMaster",
+            "deadline" : "2015-12-19",
             "date de fin" : "2016-01-03"
         }
     ];
