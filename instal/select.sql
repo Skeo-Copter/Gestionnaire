@@ -36,4 +36,16 @@ INNER JOIN user u
 WHERE u.user_id = 3
 
 
+INSERT INTO task (title, description, deadline, estimated_time, status_id) 
+VALUES ('Sauver un arbre', "Il faut ABSOLUMENT sauver un putain d'arbre parce que c'est mère nature et que ca fait cool devant les gonzesses écolos", '2016-01-15', '2015-12-11', 1);
+
+UPDATE task
+SET title = 'Sauver un arbre', 
+    description = "Il faut ABSOLUMENT sauver un putain d'arbre parce que c'est mère nature et que ca fait cool devant les gonzesses écolos", 
+    deadline = '2016-01-15', 
+    estimated_time = '2015-12-11', 
+    status_id = 1
+
+DELETE FROM task
+WHERE task.task_id = 2
 

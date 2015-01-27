@@ -62,7 +62,7 @@ class Router
         $matches = [];
         $req     = $this->getRequest();
         $uri     = $req->getUri();
-
+                
         foreach ($this->getRoutes() as $route) {
             $pattern = '#^'.$route->getUri().'$#';
             if (preg_match($pattern, $uri, $matches) && 

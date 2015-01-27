@@ -23,6 +23,7 @@ class Api
 
     public function serve()
     {
+ 
         $route    = $this->getRouter()->run();
         $error404 = new Result404();
 

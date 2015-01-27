@@ -13,9 +13,7 @@ class Task extends Api
 
         $table = new \Model\DbTable\Task();
         
-        var_dump('hello');
-        
-        $this->get('/TimeTracking/application/back/back/todos', function () use ($table){
+        $this->get('/gestionnaire/application/back/back/todos', function () use ($table){
             $result = new Result();
             $result->data = $table->findAll();
             return $result;

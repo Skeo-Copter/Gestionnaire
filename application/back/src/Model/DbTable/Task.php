@@ -13,7 +13,8 @@ class Task
     }
     public function findAll()
     {
-        $sql= 'Select * from task ';
+        $sql= 'Select * from task';
+        
         $stmt = $this->pdo->query($sql);
         $result = array();
         foreach($stmt->fetchAll(\PDO::FETCH_ASSOC) as $row){
