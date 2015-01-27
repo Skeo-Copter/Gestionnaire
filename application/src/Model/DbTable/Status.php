@@ -2,7 +2,7 @@
 
 namespace Model\DbTable;
 
-class User
+class Status
 {
     private $pdo;
     
@@ -13,7 +13,7 @@ class User
     }
     public function findAll()
     {
-        $sql= 'Select * from user';
+        $sql= 'Select * from status';
         $stmt = $this->pdo->query($sql);
         $result = array();
         foreach($stmt->fetchAll(\PDO::FETCH_ASSOC) as $row){

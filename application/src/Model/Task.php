@@ -1,7 +1,7 @@
 <?php
 namespace Model;
 
-class Toask
+class Task
 {
     private $id;
     private $title;
@@ -13,8 +13,11 @@ class Toask
     
     function __construct($id, $title, $description, $deadLine, $estimatedTime, $statusId) {
         $this->setId($id);
-        $this->setTask($task);
-        $this->setDone($done);
+        $this->setTitle($title);
+        $this->setDescription($description);
+        $this->setDeadline($deadline);
+        $this->setEstimatedTime($estimatedTime);
+        $this->setStatusId($statusId);
     }
 
     public function getId() {
