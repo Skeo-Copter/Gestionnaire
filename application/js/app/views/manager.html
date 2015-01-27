@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<!-- Amine -->
 <html>
     <head>
         <title>Welcome to the manager interface.</title>
@@ -11,19 +7,22 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body ng-app="taskModule">
-        <div ng-controller="taskListCtrl">
-            <h2 ng-repeat="task in array">{{ task.titre }}</h2>
-            <p ng-repeat="task in array">
-                {{ task.description }} <br>
-            <p ng-repeat="task in array"><u>Utilisateur concerné</u> : {{ task.user }}</p>
-        <i ng-repeat="task in array"><u>Deadline</u> : {{ task.deadline }}</i>
-            </p>
+        
+        
+        
+        <div ng-controller="allTasksCtrl">
+            <div ng-repeat="task in tasks">
+                <h2>{{ task.title}}</h2>
+                <p>
+                    {{ task.description}} <br>
+                </p>
+                <i><u>Deadline</u> : {{ task.deadline}}</i>
+            </div>
         </div>
-        
-        
-        
-        
-        
+
+
+
+
         <script src = "/TimeTracking/application/js/angular.min.js"></script>
         <script src = "/TimeTracking/application/js/app.js"></script>
         <script src = "/TimeTracking/application/js/controllers.js"></script>

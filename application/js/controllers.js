@@ -15,6 +15,7 @@ app.controller('chronoCtrl', function (){
 
 app.controller('taskUserCtrl', function ($scope){
    
+   
     $scope.tableau = [
         {
             "user_id" : "001",
@@ -79,21 +80,33 @@ app.controller('tableUserCtrl', function ($scope){
 /**********************/
 /* CONTROLLERS MANAGER */
 /*********************/
+app.controller('allTasksCtrl', function ($scope, $http) {
+    $http.get('/TimeTracking/application/back/back/todos').
+            success(function (data) {
+                console.log(data);
+                $scope.tasks = data.data;
+            }).
+            error(function (data) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+            });
+});
+
 app.controller('taskListCtrl', function ($scope) {
     $scope.array = [
         {
-            "titre" : "Acheter mouton",
-            "description" : "Faut un mouton c'est important pour l'amusement",
-            "user" : "LePen",
-            "deadline" : "2015-02-04",
-            "date de fin" : "2015-02-14"
+            "titre": "Acheter mouton",
+            "description": "Faut un mouton c'est important pour l'amusement",
+            "user": "LePen",
+            "deadline": "2015-02-04",
+            "date de fin": "2015-02-14"
         },
         {
-            "titre" : "Vendre surplus de poneys",
-            "description" : "Trop de poneys tue le poney",
-            "user" : "PoneyMaster",
-            "deadline" : "2015-12-19",
-            "date de fin" : "2016-01-03"
+            "titre": "Vendre surplus de poneys",
+            "description": "Trop de poneys tue le poney",
+            "user": "PoneyMaster",
+            "deadline": "2015-12-19",
+            "date de fin": "2016-01-03"
         }
     ];
 });
