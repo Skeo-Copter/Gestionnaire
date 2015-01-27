@@ -19,6 +19,7 @@ app.controller('chronoCtrl', function ($scope){
 
 
 
+
 /**********************/
 /* CONTROLLERS MANAGER */
 /*********************/
