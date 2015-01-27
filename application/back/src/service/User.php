@@ -12,7 +12,6 @@ class User extends Api
         parent::__construct();
 
         $table = new \Model\DbTable\User();
-        var_dump('hello');
 
         $this->get('/TimeTracking/application/back/back/user', function () use ($table){
             $result = new Result();

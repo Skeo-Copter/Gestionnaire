@@ -4,6 +4,7 @@ namespace Service;
 
 use Ipf\Rest\Api;
 use Ipf\Rest\Result;
+use Ipf\Http\Request;
 
 class Task extends Api
 {
@@ -19,16 +20,13 @@ class Task extends Api
             return $result;
         });
 
-        $this->get(
-            '/TimeTracking/application/back/back/weektask',
-            function () use ($table) {
-                $result = new Result();
-                $result->data = array(
-                    'prenom' => 'toto',
-                    'nom'    => 'otot'
-                );
-                return $result;
-            }
-        );
+        $table = new \Model\DbTable\User();
+        
+        $this->get('/gestionnaire/application/back/back/manager/UserTask', function () use ($table){
+            $result = new Result();
+            $result->data = $table->findAll();
+            return $result;
+        });
     }
+    
 }
