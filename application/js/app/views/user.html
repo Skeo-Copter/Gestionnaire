@@ -5,55 +5,34 @@
         <title>RestFul With AngularJS</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
     </head>
     <body ng-app="taskModule">
         
         <div ng-controller="chronoCtrl">
 
-            <span id="chronotime">0:00:00:00</span>
-            <form name="chronoForm">
-                <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
-                <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
-            </form>
+           
 
         </div>        
 
  <div ng-controller="taskUserCtrl">
-            
-                <p ng-repeat="task1 in array1">
-                     <table border="1">
-                <tr>
 
-                    <td>{{ task_id }}</td>
-                    <td>{{ title }}</td>
-                    <td>{{ description }}</td>
-                    <td>{{ deadline }}</td>
-                    <td>{{ estimated_time }}</td>
-                    <td>{{ status_id }}</td>
-
-
-                </tr>
-
-            </table>
- </p>
-            
-        </div>
-
-        <div ng-controller="taskUserCtrl">
-
-           
-
-
-
-
-
-
+     
+                    {{ tableau }}
+                    {{ task_id }}
+                    {{ title }}
+                    {{ description }}
+                    {{ deadline }}
+                    {{ estimated_time }}
+                    {{ status_id }}
 
         </div>
 
+        
+
+        
+        <div ng-include src="'./calculator.html'"></div>
+        
+        
 
 
         <script src = "/TimeTracking/application/js/angular.min.js"></script>
