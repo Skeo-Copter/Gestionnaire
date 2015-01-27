@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>RestFul With AngularJS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body ng-app="taskModule">
+        
+        <div ng-controller="chronoCtrl">
+
+           
+
+        </div>        
+
+ <div ng-controller="taskUserCtrl">
+
+     
+                    {{ tableau }}
+                    {{ task_id }}
+                    {{ title }}
+                    {{ description }}
+                    {{ deadline }}
+                    {{ estimated_time }}
+                    {{ status_id }}
+
+        </div>
+
+        
+
+        
+        <div ng-include src="'./calculator.html'"></div>
+        
+        
+
+
+        <script src = "/TimeTracking/application/js/angular.min.js"></script>
+        <script src = "/TimeTracking/application/js/app.js"></script>
+        <script src = "/TimeTracking/application/js/controllers.js"></script>
+        <script></script>
+
+
+    </body>
+</html>
