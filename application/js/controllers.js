@@ -1,10 +1,14 @@
 'use strict';
-
-
+/*******************/
+/* CONTROLLERS USER */
+/******************/
 app.controller('taskCtrl', function ($scope, $http) {
     $scope.prenom = 'Jaroul';
        });
-        
+
+/**********************/
+/* CONTROLLERS MANAGER */
+/*********************/
 app.controller('managerCtrl', function ($scope) {
     $scope.array = [
         {
