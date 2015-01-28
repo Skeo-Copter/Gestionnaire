@@ -24,7 +24,16 @@ class Task extends Api
         
         $this->get('/gestionnaire/application/back/back/manager/UserTask', function () use ($table){
             $result = new Result();
-            $result->data = $table->findAll();
+            $result->data = $table->UserTask();
+            return $result;
+        });
+        
+        $this->post('/gestionnaire/application/back/back/getUser', function () use ($table){
+
+            $request = $this->getRequest()->getRawBody();
+            var_dump($request['login']);
+            $result = new Result();
+            $result->data = $table->getUser($request);
             return $result;
         });
     }
